@@ -1,3 +1,7 @@
+html{
+    -webkit-text-size-adjust:100%;
+}
+
 *{
     margin:0;
     padding:0;
@@ -5,11 +9,11 @@
 }
 
 body{
-    min-height:100vh;
+
+    min-height:100dvh;
 
     display:flex;
     justify-content:center;
-
     align-items:flex-start;
 
     padding:20px 0;
@@ -34,6 +38,7 @@ body{
 
 /* FUNDO */
 body::before{
+
     content:"";
 
     position:fixed;
@@ -50,11 +55,15 @@ body::before{
     z-index:0;
 }
 
+/* CONTAINER */
 .container{
+
     position:relative;
+
     z-index:2;
 
     width:92%;
+
     max-width:380px;
 
     margin:20px 0;
@@ -63,9 +72,13 @@ body::before{
 
     border-radius:22px;
 
-    background:rgba(255,255,255,0.08);
+    background:
+    rgba(255,255,255,0.08);
 
     backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:
+    blur(14px);
 
     box-shadow:
     0 0 20px rgba(255,255,255,0.08),
@@ -78,13 +91,15 @@ body::before{
 
 /* TITULO */
 h1{
-    font-family: 'Great Vibes', cursive;
 
-    font-size:3rem;
+    font-family:
+    'Great Vibes', cursive;
+
+    font-size:2.8rem;
 
     color:#93c5fd;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
     font-weight:normal;
 
@@ -94,10 +109,13 @@ h1{
     0 0 15px rgba(255,255,255,0.25);
 }
 
+/* TEXTO */
 p{
-    font-family:'Cormorant Garamond', serif;
 
-    font-size:0.95rem;
+    font-family:
+    'Cormorant Garamond', serif;
+
+    font-size:1rem;
 
     line-height:1.9;
 
@@ -109,33 +127,18 @@ p{
 
     opacity:0;
 
-    animation:texto 4s forwards;
+    animation:
+    texto 4s forwards;
 
     animation-delay:1s;
 }
 
-/* ASSINATURA */
-.assinatura{
-    margin-top:30px;
-
-    font-family:'Dancing Script', cursive;
-
-    font-size:1.7rem;
-
-    color:#cbd5e1;
-
-    opacity:0;
-
-    animation:texto 4s forwards;
-
-    animation-delay:3s;
-}
-
 /* BOTÃO */
 button{
+
     width:100%;
 
-    margin-top:30px;
+    margin-top:28px;
 
     padding:15px;
 
@@ -154,7 +157,7 @@ button{
     font-family:
     'Dancing Script', cursive;
 
-    font-size:1.4rem;
+    font-size:1.3rem;
 
     cursor:pointer;
 
@@ -162,12 +165,16 @@ button{
 
     backdrop-filter:blur(10px);
 
+    -webkit-backdrop-filter:
+    blur(10px);
+
     box-shadow:
     0 0 15px rgba(96,165,250,0.2);
 }
 
 button:hover{
-    transform:scale(1.04);
+
+    transform:scale(1.03);
 
     background:#3b82f6;
 
@@ -175,8 +182,29 @@ button:hover{
     0 0 25px rgba(59,130,246,0.6);
 }
 
+/* ASSINATURA */
+.assinatura{
+
+    margin-top:28px;
+
+    font-family:
+    'Dancing Script', cursive;
+
+    font-size:1.5rem;
+
+    color:#cbd5e1;
+
+    opacity:0;
+
+    animation:
+    texto 4s forwards;
+
+    animation-delay:3s;
+}
+
 /* CORAÇÕES */
 .heart{
+
     position:fixed;
 
     bottom:-20px;
@@ -189,7 +217,8 @@ button:hover{
 
     z-index:1;
 
-    animation:subir linear forwards;
+    animation:
+    subir linear forwards;
 
     text-shadow:
     0 0 10px rgba(96,165,250,0.6);
@@ -235,61 +264,48 @@ button:hover{
     }
 }
 
-/* TEXTO APARECENDO */
+/* TEXTO */
 @keyframes texto{
+
     to{
         opacity:1;
     }
 }
 
-/* CELULARES PEQUENOS */
+/* CELULARES */
 @media(max-width:768px){
-
-    body{
-        align-items:flex-start;
-        padding:20px 0;
-        overflow-y:auto;
-    }
 
     .container{
 
         width:92%;
+
         max-width:360px;
 
-        margin:20px auto;
-
         padding:20px 16px;
-
-        border-radius:20px;
     }
 
     h1{
         font-size:2.2rem;
-        margin-bottom:15px;
     }
 
     p{
-        font-size:0.92rem;
-        line-height:1.8;
+        font-size:0.95rem;
     }
 
     .assinatura{
-        font-size:1.4rem;
+        font-size:1.3rem;
     }
 
     button{
-        width:100%;
         font-size:1.1rem;
-        padding:14px;
     }
 }
 
 /* TABLETS */
-@media(min-width:768px){
+@media(min-width:769px){
 
     .container{
         max-width:550px;
-
         padding:35px;
     }
 
@@ -302,7 +318,7 @@ button:hover{
     }
 }
 
-/* TELAS GRANDES */
+/* COMPUTADORES */
 @media(min-width:1200px){
 
     .container{

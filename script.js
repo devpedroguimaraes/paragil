@@ -1,26 +1,44 @@
-function criarCoracao() {
-    const heart = document.createElement("div");
+function criarCoracao(){
+
+    const heart =
+    document.createElement("div");
 
     heart.classList.add("heart");
-    heart.innerHTML = "💙";
 
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
-    heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+    heart.innerText = "💙";
+
+    heart.style.left =
+    Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+    (Math.random() * 18 + 12) + "px";
+
+    heart.style.animationDuration =
+    (Math.random() * 4 + 5) + "s";
 
     document.body.appendChild(heart);
 
     setTimeout(() => {
+
         heart.remove();
-    }, 10000);
+
+    }, 9000);
 }
 
-setInterval(criarCoracao, 300);
+/* CRIA CORAÇÕES */
+setInterval(criarCoracao, 400);
 
-function mostrarMensagem() {
-    const assinatura = document.getElementById("assinatura");
+/* BOTÃO */
+function mostrarMensagem(){
+
+    const assinatura =
+    document.getElementById(
+        "assinatura"
+    );
 
     assinatura.style.opacity = "1";
 
-    alert("Você continua sendo alguém muito especial 💙");
+    alert(
+        "Você continua sendo alguém muito especial 💙"
+    );
 }
