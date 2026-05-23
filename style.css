@@ -2,134 +2,78 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    background:
-    linear-gradient(
+body {
+    background: linear-gradient(
         135deg,
         #0f172a,
         #1e293b,
         #334155
     );
-
     color: white;
-
     font-family: sans-serif;
-
     overflow-x: hidden;
-
     min-height: 100vh;
-
     padding: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* CONTAINER */
-.container{
-
-    width:88%;
-
-    max-width:320px;
-
-    padding:18px 14px;
-
-    border-radius:20px;
-
-    margin:100px;
-
-    background:
-    rgba(255,255,255,0.08);
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:2;
-
-    border:
-    1px solid rgba(255,255,255,0.08);
-
-    box-shadow:
-    0 0 20px rgba(0,0,0,0.25);
+/* CONTAINER - Ajustado para o iPhone 12 */
+.container {
+    width: 88%;
+    max-width: 330px; /* Largura ideal para a tela de 390px do iPhone 12 */
+    padding: 24px 18px;
+    border-radius: 20px;
+    
+    /* ESPAÇO EM CIMA E EM BAIXO: 50px garante o respiro ideal no topo/fundo */
+    /* AUTO nas laterais centraliza perfeitamente a caixinha na tela */
+    margin: 50px auto; 
+    
+    background: rgba(255, 255, 255, 0.08);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
+
 /* TITULO */
 h1 {
-
-    font-family:
-    'Great Vibes', cursive;
-
-    font-size: 40px;
-
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.3rem; /* Fica proporcional no iPhone 12 */
     color: #93c5fd;
-
     margin-bottom: 20px;
-
     line-height: 1.2;
-
     font-weight: normal;
 }
 
 /* TEXTO */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 310px; /* Evita estourar em telas de 320px de largura */
-        padding: 24px 16px;
-        border-radius: 20px;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    p {
-        font-size: 1rem; /* Tamanho ideal para o container de 310px */
-        line-height: 1.6;
-    }
-
-    button {
-        font-size: 1.1rem;
-        padding: 12px;
-        margin-top: 24px;
-    }
-
-    .assinatura {
-        font-size: 1.2rem;
-        margin-top: 20px;
-    }
+p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; /* Leitura confortável no celular */
+    line-height: 1.7;
+    color: #f8fafc;
 }
 
 /* BOTÃO */
 button {
-
     width: 100%;
-
-    margin-top: 28px;
-
-    padding: 12px;
-
+    margin-top: 24px;
+    padding: 14px;
     border: none;
-
     border-radius: 40px;
-
     background: #3b82f6;
-
     color: white;
-
-    font-family:
-    'Dancing Script', cursive;
-
-    font-size: 1rem;
-
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -139,86 +83,40 @@ button:active {
 
 /* ASSINATURA */
 .assinatura {
-
     margin-top: 24px;
-
-    font-family:
-    'Dancing Script', cursive;
-
-    font-size: 1.4rem;
-
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
     color: #cbd5e1;
-
     opacity: 0;
-
     transition: 1s;
 }
 
 /* CORAÇÕES */
 .heart {
-
     position: fixed;
-
     bottom: -20px;
-
     pointer-events: none;
-
-    animation:
-    subir linear forwards;
-
+    animation: subir linear forwards;
     z-index: 1;
 }
 
 /* ANIMAÇÃO */
 @keyframes subir {
-
     from {
-        transform:
-        translateY(0)
-        scale(0.5);
-
+        transform: translateY(0) scale(0.5);
         opacity: 0;
     }
-
     to {
-        transform:
-        translateY(-120vh)
-        scale(1.2);
-
+        transform: translateY(-120vh) scale(1.2);
         opacity: 1;
     }
 }
 
-/* RESPONSIVO */
+/* MEDIA QUERY ESPECÍFICA PARA IPHONE 12 (E telas similares até 480px) */
 @media (max-width: 480px) {
     body {
         padding: 10px;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 310px; /* Evita estourar em telas de 320px de largura */
-        padding: 24px 16px;
-        border-radius: 20px;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    p {
-        font-size: 1rem; /* Tamanho ideal para o container de 310px */
-        line-height: 1.6;
-    }
-
-    button {
-        font-size: 1.1rem;
-        padding: 12px;
-        margin-top: 24px;
-    }
-
-    .assinatura {
-        font-size: 1.2rem;
-        margin-top: 20px;
+        /* Alinha por cima caso o conteúdo cresça além da tela */
+        align-items: flex-start; 
     }
 }
