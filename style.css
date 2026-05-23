@@ -34,40 +34,40 @@ body {
 }
 
 /* CONTAINER */
-.container {
+.container{
 
-    width: 100%;
-    max-width: 420px;
+    width:88%;
+
+    max-width:320px;
+
+    padding:18px 14px;
+
+    border-radius:20px;
+
+    margin:20px auto;
 
     background:
     rgba(255,255,255,0.08);
 
-    border-radius: 30px;
+    text-align:center;
 
-    padding: 32px 24px;
+    position:relative;
 
-    text-align: center;
-
-    position: relative;
-
-    z-index: 2;
+    z-index:2;
 
     border:
     1px solid rgba(255,255,255,0.08);
 
     box-shadow:
-    0 0 25px rgba(0,0,0,0.25);
-
-    backdrop-filter: blur(10px);
+    0 0 20px rgba(0,0,0,0.25);
 }
-
 /* TITULO */
 h1 {
 
     font-family:
     'Great Vibes', cursive;
 
-    font-size: 2.5rem;
+    font-size: 2rem;
 
     color: #93c5fd;
 
@@ -84,7 +84,7 @@ p {
     font-family:
     'Cormorant Garamond', serif;
 
-    font-size: 1.3rem;
+    font-size: 0.92rem;
 
     line-height: 1.8;
 
@@ -98,7 +98,7 @@ button {
 
     margin-top: 28px;
 
-    padding: 16px;
+    padding: 12px;
 
     border: none;
 
@@ -111,7 +111,7 @@ button {
     font-family:
     'Dancing Script', cursive;
 
-    font-size: 1.4rem;
+    font-size: 1rem;
 
     cursor: pointer;
 
