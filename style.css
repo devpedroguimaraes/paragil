@@ -4,7 +4,7 @@ html{
 
 *{
     margin:0;
-    padding:0;
+    padding:1px;
     box-sizing:border-box;
 }
 
@@ -35,16 +35,16 @@ body{
 /* CONTAINER */
 .container{
 
-    width:100%;
+    width:70%;
 
     max-width:360px;
 
     background:
     rgba(255,255,255,0.08);
 
-    border-radius:22px;
+    border-radius:40px;
 
-    padding:22px 18px;
+    padding:25px 13px;
 
     text-align:center;
 
@@ -163,32 +163,5 @@ button{
         scale(1.2);
 
         opacity:1;
-    }
-}
-
-/* TABLET */
-@media(min-width:768px){
-
-    .container{
-
-        max-width:550px;
-
-        padding:35px;
-    }
-
-    h1{
-        font-size:4rem;
-    }
-
-    p{
-        font-size:1.3rem;
-    }
-
-    .assinatura{
-        font-size:2rem;
-    }
-
-    button{
-        font-size:1.5rem;
     }
 }
