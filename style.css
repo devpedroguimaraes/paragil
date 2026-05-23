@@ -243,30 +243,44 @@ button:hover{
 }
 
 /* CELULARES PEQUENOS */
-@media(max-width:480px){
+@media(max-width:768px){
+
+    body{
+        align-items:flex-start;
+        padding:20px 0;
+        overflow-y:auto;
+    }
 
     .container{
-        width:94%;
 
-        padding:22px 18px;
+        width:92%;
+        max-width:360px;
+
+        margin:20px auto;
+
+        padding:20px 16px;
+
+        border-radius:20px;
     }
 
     h1{
-        font-size:2.4rem;
+        font-size:2.2rem;
+        margin-bottom:15px;
     }
 
     p{
-        font-size:0.98rem;
-
+        font-size:0.92rem;
         line-height:1.8;
     }
 
     .assinatura{
-        font-size:1.5rem;
+        font-size:1.4rem;
     }
 
     button{
-        font-size:1.2rem;
+        width:100%;
+        font-size:1.1rem;
+        padding:14px;
     }
 }
 
