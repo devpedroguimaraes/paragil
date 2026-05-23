@@ -10,17 +10,6 @@ html{
 
 body{
 
-    min-height:100dvh;
-
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-
-    padding:20px 0;
-
-    overflow-x:hidden;
-    overflow-y:auto;
-
     background:
     linear-gradient(
         135deg,
@@ -31,62 +20,43 @@ body{
 
     color:white;
 
-    position:relative;
-
     font-family:sans-serif;
-}
 
-/* FUNDO */
-body::before{
+    overflow-x:hidden;
 
-    content:"";
+    min-height:100vh;
 
-    position:fixed;
+    padding:20px 14px;
 
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at center,
-        rgba(96,165,250,0.15),
-        transparent 70%
-    );
-
-    z-index:0;
+    display:flex;
+    justify-content:center;
 }
 
 /* CONTAINER */
 .container{
 
-    position:relative;
+    width:100%;
 
-    z-index:2;
-
-    width:92%;
-
-    max-width:380px;
-
-    margin:20px 0;
-
-    padding:22px 18px;
-
-    border-radius:22px;
+    max-width:360px;
 
     background:
     rgba(255,255,255,0.08);
 
-    backdrop-filter:blur(14px);
+    border-radius:22px;
 
-    -webkit-backdrop-filter:
-    blur(14px);
-
-    box-shadow:
-    0 0 20px rgba(255,255,255,0.08),
-    0 0 40px rgba(96,165,250,0.12);
+    padding:22px 18px;
 
     text-align:center;
 
-    animation:aparecer 1s ease;
+    position:relative;
+
+    z-index:2;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.25);
 }
 
 /* TITULO */
@@ -95,18 +65,15 @@ h1{
     font-family:
     'Great Vibes', cursive;
 
-    font-size:2.8rem;
+    font-size:2.3rem;
 
     color:#93c5fd;
 
     margin-bottom:18px;
 
-    font-weight:normal;
-
     line-height:1.2;
 
-    text-shadow:
-    0 0 15px rgba(255,255,255,0.25);
+    font-weight:normal;
 }
 
 /* TEXTO */
@@ -119,18 +86,7 @@ p{
 
     line-height:1.9;
 
-    color:#f1f5f9;
-
-    max-width:100%;
-
-    margin:0 auto;
-
-    opacity:0;
-
-    animation:
-    texto 4s forwards;
-
-    animation-delay:1s;
+    color:#f8fafc;
 }
 
 /* BOTÃO */
@@ -138,68 +94,41 @@ button{
 
     width:100%;
 
-    margin-top:28px;
+    margin-top:24px;
 
-    padding:15px;
+    padding:14px;
 
     border:none;
 
     border-radius:40px;
 
-    background:
-    rgba(96,165,250,0.2);
-
-    border:
-    1px solid rgba(255,255,255,0.15);
+    background:#3b82f6;
 
     color:white;
 
     font-family:
     'Dancing Script', cursive;
 
-    font-size:1.3rem;
+    font-size:1.2rem;
 
     cursor:pointer;
-
-    transition:0.4s;
-
-    backdrop-filter:blur(10px);
-
-    -webkit-backdrop-filter:
-    blur(10px);
-
-    box-shadow:
-    0 0 15px rgba(96,165,250,0.2);
-}
-
-button:hover{
-
-    transform:scale(1.03);
-
-    background:#3b82f6;
-
-    box-shadow:
-    0 0 25px rgba(59,130,246,0.6);
 }
 
 /* ASSINATURA */
 .assinatura{
 
-    margin-top:28px;
+    margin-top:24px;
 
     font-family:
     'Dancing Script', cursive;
 
-    font-size:1.5rem;
+    font-size:1.3rem;
 
     color:#cbd5e1;
 
     opacity:0;
 
-    animation:
-    texto 4s forwards;
-
-    animation-delay:3s;
+    transition:1s;
 }
 
 /* CORAÇÕES */
@@ -209,103 +138,41 @@ button:hover{
 
     bottom:-20px;
 
-    color:#60a5fa;
-
-    opacity:0.8;
-
     pointer-events:none;
-
-    z-index:1;
 
     animation:
     subir linear forwards;
 
-    text-shadow:
-    0 0 10px rgba(96,165,250,0.6);
+    z-index:1;
 }
 
-/* ANIMAÇÃO CORAÇÕES */
+/* ANIMAÇÃO */
 @keyframes subir{
 
-    0%{
+    from{
         transform:
         translateY(0)
-        scale(0.5)
-        rotate(0deg);
+        scale(0.5);
 
         opacity:0;
     }
 
-    20%{
-        opacity:0.8;
-    }
-
-    100%{
+    to{
         transform:
         translateY(-120vh)
-        scale(1.4)
-        rotate(360deg);
+        scale(1.2);
 
-        opacity:0;
-    }
-}
-
-/* ENTRADA */
-@keyframes aparecer{
-
-    from{
-        transform:scale(0.8);
-        opacity:0;
-    }
-
-    to{
-        transform:scale(1);
         opacity:1;
     }
 }
 
-/* TEXTO */
-@keyframes texto{
-
-    to{
-        opacity:1;
-    }
-}
-
-/* CELULARES */
-@media(max-width:768px){
+/* TABLET */
+@media(min-width:768px){
 
     .container{
 
-        width:92%;
-
-        max-width:360px;
-
-        padding:20px 16px;
-    }
-
-    h1{
-        font-size:2.2rem;
-    }
-
-    p{
-        font-size:0.95rem;
-    }
-
-    .assinatura{
-        font-size:1.3rem;
-    }
-
-    button{
-        font-size:1.1rem;
-    }
-}
-
-/* TABLETS */
-@media(min-width:769px){
-
-    .container{
         max-width:550px;
+
         padding:35px;
     }
 
@@ -314,22 +181,14 @@ button:hover{
     }
 
     p{
-        font-size:1.2rem;
-    }
-}
-
-/* COMPUTADORES */
-@media(min-width:1200px){
-
-    .container{
-        max-width:650px;
-    }
-
-    h1{
-        font-size:4.5rem;
-    }
-
-    p{
         font-size:1.3rem;
+    }
+
+    .assinatura{
+        font-size:2rem;
+    }
+
+    button{
+        font-size:1.5rem;
     }
 }
